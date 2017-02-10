@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-sm-12">
+        <button class="btn btn-primary pull-right header-btn" data-ng-click="$ctrl.importTeams()">Import Teams</button>
+        <h1>Teams</h1>
+        <hr>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <div data-ng-if="$ctrl.teams.length === 0">
+            <p>0 Teams currently stored</p>
+        </div>
+        <item-list items="$ctrl.teams" on-update="$ctrl.updateTeams(items)"></item-list>
+    </div>
+</div>

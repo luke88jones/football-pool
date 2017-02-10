@@ -1,0 +1,15 @@
+item-list {
+    .glyphicon {
+        cursor: pointer;
+    }
+    .add-item-input {
+        input, .btn {
+            border-radius: 0;
+        }
+    }
+    .item-table-container {
+        margin-top: -1px;
+        max-height: 500px;
+        overflow: auto;
+    }
+}

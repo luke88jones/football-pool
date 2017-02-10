@@ -1,0 +1,20 @@
+<form name="$ctrl.newItemForm">
+    <div class="input-group add-item-input">
+        <input type="text" class="form-control" name="newItem" placeholder="Add item..." data-ng-model="$ctrl.newItem" required />
+        <span class="input-group-btn">
+            <input class="btn btn-default" type="submit" data-ng-click="$ctrl.addItem()" value="Add" />
+        </span>
+    </div>
+</form>
+<div class="item-table-container">
+    <table class="table table-condensed table-bordered">
+        <tbody>
+            <tr data-ng-repeat="item in $ctrl.items track by $index">
+                <td>
+                    <span>{{item}}</span>
+                    <span class="glyphicon glyphicon-remove pull-right" aria-hidden="true" data-ng-click="$ctrl.removeItem($index)"></span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

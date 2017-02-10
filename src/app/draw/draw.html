@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-sm-12">
+        <button class="btn btn-primary pull-right header-btn" data-ng-click="$ctrl.drawTeams()">Draw Teams</button>
+        <h1>Draw</h1>
+        <hr>
+    </div>    
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <h3>Previous Draws</h3>
+        <hr>
+        <p data-ng-if="$ctrl.previousDraws.length === 0">No previous draws available</p>
+    </div>
+</div>
+<div class="row" data-ng-if="$ctrl.drawResult.length > 0">
+    <div class="col-sm-6">
+        <h3>New Draw</h3>
+        <hr>
+        <table class="table table-condensed tabel-bordered">
+            <tr data-ng-repeat="result in $ctrl.drawResult track by $index">
+                <td>{{result.person}}</td>
+                <td>{{result.team}}</td>
+            </tr>
+        </table>
+        <button class="btn btn-small btn-default pull-right">Save Draw</button>
+    </div>
+</div>
